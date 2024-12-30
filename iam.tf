@@ -16,7 +16,7 @@
 
 
 data "google_organization" "org" {
-  domain = "jeremyto.altostrat.com"
+  domain = local.gcp_org_domain
 }
 
 resource "google_project_iam_member" "serviceusage-serviceUsageConsumer" {
@@ -27,7 +27,7 @@ resource "google_project_iam_member" "serviceusage-serviceUsageConsumer" {
 
   project = local.project_id
   role    = "roles/serviceusage.serviceUsageConsumer"
-  member  = "group:gcp-developers@jeremyto.altostrat.com"
+  member  = local.cloud_asset_owner_principal
 }
 
 
@@ -39,7 +39,7 @@ resource "google_project_iam_member" "cloudasset-owner" {
 
   project = local.project_id
   role    = "roles/cloudasset.owner"
-  member  = "group:gcp-developers@jeremyto.altostrat.com"
+  member  = local.cloud_asset_owner_principal
 }
 
 resource "google_project_iam_member" "privilegedaccessmanager-serviceAgent" {

@@ -2,13 +2,42 @@
 
 ## Setup
 
-1. Find out your GCP project's id and number from the dashboard in the cloud console, and update the following variables in the `terraform.tfvars.json` file. Replace `YOUR_PROJECT_NMR`, `YOUR_PROJECT_ID`, `your_project_region` with the correct values.
+1. Find out your GCP project's id and number from the dashboard in the cloud console, and update the following variables in the `terraform.tfvars.json` file. Replace:
+
+* `YOUR_PROJECT_NMR`
+* `YOUR_PROJECT_ID`
+* `YOUR_PROJECT_REGION`
+* `YOUR_ORG_DOMAIN`
+* `<user|group>:<YOUR_PRINCIPAL_EMAIL>`
+* `<YOUR_ADMIN_EMAIL>`
+* `<YOUR_REQUESTER_EMAIL>`
+* `<YOUR_APPROVER_RECIPIENT_EMAIL>`
+* `<user|group>:<YOUR_APPROVER_PRINCIPAL_EMAIL>`
+
+with the correct values.
 
 ```shell
 {
     "project_id": "YOUR_PROJECT_ID",
     "project_nmr": YOUR_PROJECT_NMR,
     "project_default_region": "YOUR_PROJECT_REGION",
+    "gcp_org_domain": "YOUR_ORG_DOMAIN",
+    "cloud_asset_owner_principal": "<user|group>:<YOUR_PRINCIPAL_EMAIL>",
+    "eligible_users_principals": [
+        "<user|group>:<YOUR_PRINCIPAL_EMAIL>"
+    ],
+    "additional_notification_admin": [
+        "<YOUR_ADMIN_EMAIL>"
+    ],
+    "additional_notification_requester": [
+        "<YOUR_REQUESTER_EMAIL>"
+    ],
+    "approver_email_recipients": [
+         "<YOUR_APPROVER_RECIPIENT_EMAIL>"
+    ],
+    "approver_principals": [
+         "<user|group>:<YOUR_APPROVER_PRINCIPAL_EMAIL>"
+    ]
 }
 ```
 

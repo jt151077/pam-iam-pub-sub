@@ -32,9 +32,7 @@ resource "google_privileged_access_manager_entitlement" "entitlement" {
   }
 
   eligible_users {
-    principals = [
-      "user:jeremy@jeremyto.altostrat.com"
-    ]
+    principals = local.eligible_users_principals
   }
 
   privileged_access {
@@ -48,13 +46,8 @@ resource "google_privileged_access_manager_entitlement" "entitlement" {
   }
 
   additional_notification_targets {
-    admin_email_recipients = [
-      "jeremy@jeremyto.altostrat.com",
-      "jeremyto@google.com"
-    ]
-    requester_email_recipients = [
-      "jeremyto@google.com"
-    ]
+    admin_email_recipients = local.additional_notification_admin
+    requester_email_recipients = local.additional_notification_requester
   }
 
   approval_workflow {
@@ -62,13 +55,9 @@ resource "google_privileged_access_manager_entitlement" "entitlement" {
       require_approver_justification = true
       steps {
         approvals_needed = 1
-        approver_email_recipients = [
-          "jeremyto@google.com"
-        ]
+        approver_email_recipients = local.approver_email_recipients
         approvers {
-          principals = [
-            "user:admin-jeremy@jeremyto.altostrat.com"
-          ]
+          principals = local.approver_principals
         }
       }
     }
@@ -96,13 +85,3 @@ resource "google_cloud_asset_project_feed" "pam-asset-inventory-feed" {
     }
   }
 }
-
-/*
-$ terraform import google_pubsub_subscription.iam-asset-inventory-sub projects/jeremy-1i86s42t/subscriptions/iam-asset-inventory-sub
-
-$ terraform import google_cloud_asset_project_feed.pam-asset-inventory-feed projects/jeremy-1i86s42t/feeds/pam-inventory-feed
-
-gcloud config set billing/quota_project jeremy-1i86s42t
-*/
-
-// gcloud asset feeds create pam-inventory-feed --project=jeremy-1i86s42t --billing-project=jeremy-1i86s42t --pubsub-topic=projects/jeremy-1i86s42t/topics/iam-asset-inventory-topic --asset-types=privilegedaccessmanager.googleapis.com/Grant --content-type='resource'

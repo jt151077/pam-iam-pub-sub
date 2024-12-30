@@ -9,3 +9,31 @@ variable "project_nmr" {
 variable "project_default_region" {
   type = string
 }
+
+variable "gcp_org_domain" {
+  type = string
+}
+
+variable "cloud_asset_owner_principal" {
+  type = string
+}
+
+variable "eligible_users_principals" {
+  type = list(string)
+}
+
+variable "additional_notification_admin" {
+  type = list(string)
+}
+
+variable "additional_notification_requester" {
+  type = list(string)
+}
+
+variable "approver_email_recipients" {
+  type = list(string)
+}
+
+variable "approver_principals" {
+  type = list(string)
+}
