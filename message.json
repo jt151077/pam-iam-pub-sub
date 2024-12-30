@@ -1,0 +1,130 @@
+{
+    "asset": {
+        "ancestors": [
+            "projects/871694357385",
+            "folders/836989405935",
+            "organizations/693611386598"
+        ],
+        "assetType": "privilegedaccessmanager.googleapis.com/Grant",
+        "name": "//privilegedaccessmanager.googleapis.com/projects/jeremy-1i86s42t/locations/global/entitlements/bigquery-admin-entitlement/grants/fe58e294-ba26-407b-98cc-7648756c3f37",
+        "resource": {
+            "data": {
+                "createTime": "2024-12-04T16:58:45.708112241Z",
+                "justification": {
+                    "unstructuredJustification": "i need to create a dataset"
+                },
+                "name": "projects/jeremy-1i86s42t/locations/global/entitlements/bigquery-admin-entitlement/grants/fe58e294-ba26-407b-98cc-7648756c3f37",
+                "privilegedAccess": {
+                    "gcpIamAccess": {
+                        "resource": "//cloudresourcemanager.googleapis.com/projects/jeremy-1i86s42t",
+                        "resourceType": "cloudresourcemanager.googleapis.com/Project",
+                        "roleBindings": [
+                            {
+                                "role": "roles/bigquery.admin"
+                            }
+                        ]
+                    }
+                },
+                "requestedDuration": "3600s",
+                "requester": "jeremy@jeremyto.altostrat.com",
+                "state": "ACTIVATING",
+                "timeline": {
+                    "events": [
+                        {
+                            "eventTime": "2024-12-04T16:58:45.719104902Z",
+                            "requested": {
+                                "expireTime": "2024-12-05T16:58:45.719104902Z"
+                            }
+                        },
+                        {
+                            "approved": {
+                                "actor": "admin-jeremy@jeremyto.altostrat.com",
+                                "reason": "not now"
+                            },
+                            "eventTime": "2024-12-04T17:08:28.51841769Z"
+                        },
+                        {
+                            "eventTime": "2024-12-04T17:08:28.518352501Z",
+                            "scheduled": {
+                                "scheduledActivationTime": "2024-12-04T17:08:28.518352501Z"
+                            }
+                        }
+                    ]
+                },
+                "updateTime": "2024-12-04T17:08:28.602715Z"
+            },
+            "discoveryDocumentUri": "https://privilegedaccessmanager.googleapis.com/$discovery/rest",
+            "discoveryName": "Grant",
+            "location": "global",
+            "parent": "//cloudresourcemanager.googleapis.com/projects/871694357385",
+            "version": "v1"
+        },
+        "updateTime": "2024-12-04T17:08:28.602715Z"
+    },
+    "priorAsset": {
+        "ancestors": [
+            "projects/871694357385",
+            "folders/836989405935",
+            "organizations/693611386598"
+        ],
+        "assetType": "privilegedaccessmanager.googleapis.com/Grant",
+        "name": "//privilegedaccessmanager.googleapis.com/projects/jeremy-1i86s42t/locations/global/entitlements/bigquery-admin-entitlement/grants/fe58e294-ba26-407b-98cc-7648756c3f37",
+        "resource": {
+            "data": {
+                "createTime": "2024-12-04T16:58:45.708112241Z",
+                "justification": {
+                    "unstructuredJustification": "i need to create a dataset"
+                },
+                "name": "projects/jeremy-1i86s42t/locations/global/entitlements/bigquery-admin-entitlement/grants/fe58e294-ba26-407b-98cc-7648756c3f37",
+                "privilegedAccess": {
+                    "gcpIamAccess": {
+                        "resource": "//cloudresourcemanager.googleapis.com/projects/jeremy-1i86s42t",
+                        "resourceType": "cloudresourcemanager.googleapis.com/Project",
+                        "roleBindings": [
+                            {
+                                "role": "roles/bigquery.admin"
+                            }
+                        ]
+                    }
+                },
+                "requestedDuration": "3600s",
+                "requester": "jeremy@jeremyto.altostrat.com",
+                "state": "SCHEDULED",
+                "timeline": {
+                    "events": [
+                        {
+                            "eventTime": "2024-12-04T16:58:45.719104902Z",
+                            "requested": {
+                                "expireTime": "2024-12-05T16:58:45.719104902Z"
+                            }
+                        },
+                        {
+                            "approved": {
+                                "actor": "admin-jeremy@jeremyto.altostrat.com",
+                                "reason": "not now"
+                            },
+                            "eventTime": "2024-12-04T17:08:28.51841769Z"
+                        },
+                        {
+                            "eventTime": "2024-12-04T17:08:28.518352501Z",
+                            "scheduled": {
+                                "scheduledActivationTime": "2024-12-04T17:08:28.518352501Z"
+                            }
+                        }
+                    ]
+                },
+                "updateTime": "2024-12-04T17:08:28.547514Z"
+            },
+            "discoveryDocumentUri": "https://privilegedaccessmanager.googleapis.com/$discovery/rest",
+            "discoveryName": "Grant",
+            "location": "global",
+            "parent": "//cloudresourcemanager.googleapis.com/projects/871694357385",
+            "version": "v1"
+        },
+        "updateTime": "2024-12-04T17:08:28.547514Z"
+    },
+    "priorAssetState": "PRESENT",
+    "window": {
+        "startTime": "2024-12-04T17:08:28.602715Z"
+    }
+}
