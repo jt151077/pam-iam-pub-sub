@@ -41,7 +41,6 @@ locals {
   project_number              = var.project_nmr
   project_default_region      = var.project_default_region
   gcp_org_domain              = var.gcp_org_domain
-  cloud_asset_owner_principal = var.cloud_asset_owner_principal
   eligible_users_principals   = var.eligible_users_principals
   approver_principals         = var.approver_principals
   gcp_service_list = [

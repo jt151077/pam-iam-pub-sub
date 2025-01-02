@@ -19,29 +19,6 @@ data "google_organization" "org" {
   domain = local.gcp_org_domain
 }
 
-resource "google_project_iam_member" "serviceusage-serviceUsageConsumer" {
-  depends_on = [
-    google_project_service.gcp_services
-  ]
-
-
-  project = local.project_id
-  role    = "roles/serviceusage.serviceUsageConsumer"
-  member  = local.cloud_asset_owner_principal
-}
-
-
-resource "google_project_iam_member" "cloudasset-owner" {
-  depends_on = [
-    google_project_service.gcp_services
-  ]
-
-
-  project = local.project_id
-  role    = "roles/cloudasset.owner"
-  member  = local.cloud_asset_owner_principal
-}
-
 resource "google_project_iam_member" "privilegedaccessmanager-serviceAgent" {
   depends_on = [
     google_project_service.gcp_services

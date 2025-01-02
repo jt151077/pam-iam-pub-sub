@@ -14,10 +14,6 @@ variable "gcp_org_domain" {
   type = string
 }
 
-variable "cloud_asset_owner_principal" {
-  type = string
-}
-
 variable "eligible_users_principals" {
   type = list(string)
 }
