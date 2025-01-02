@@ -26,5 +26,3 @@ for i in $APIS
 do
   echo "199.36.153.10 $i" >> /etc/hosts
 done
-
-export GOOGLE_CLOUD_QUOTA_PROJECT="$project"

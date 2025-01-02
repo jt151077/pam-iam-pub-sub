@@ -22,18 +22,6 @@ variable "eligible_users_principals" {
   type = list(string)
 }
 
-variable "additional_notification_admin" {
-  type = list(string)
-}
-
-variable "additional_notification_requester" {
-  type = list(string)
-}
-
-variable "approver_email_recipients" {
-  type = list(string)
-}
-
 variable "approver_principals" {
   type = list(string)
 }

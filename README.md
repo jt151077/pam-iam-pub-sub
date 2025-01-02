@@ -9,31 +9,19 @@
 * `YOUR_PROJECT_REGION`
 * `YOUR_ORG_DOMAIN`
 * `<user|group>:<YOUR_PRINCIPAL_EMAIL>`
-* `<YOUR_ADMIN_EMAIL>`
-* `<YOUR_REQUESTER_EMAIL>`
-* `<YOUR_APPROVER_RECIPIENT_EMAIL>`
 * `<user|group>:<YOUR_APPROVER_PRINCIPAL_EMAIL>`
 
 with the correct values.
 
 ```shell
 {
-    "project_id": "YOUR_PROJECT_ID",
-    "project_nmr": YOUR_PROJECT_NMR,
-    "project_default_region": "YOUR_PROJECT_REGION",
-    "gcp_org_domain": "YOUR_ORG_DOMAIN",
+    "project_id": "<YOUR_PROJECT_ID>",
+    "project_nmr": <YOUR_PROJECT_NMR>,
+    "project_default_region": "<YOUR_PROJECT_REGION>",
+    "gcp_org_domain": "<YOUR_ORG_DOMAIN>",
     "cloud_asset_owner_principal": "<user|group>:<YOUR_PRINCIPAL_EMAIL>",
     "eligible_users_principals": [
         "<user|group>:<YOUR_PRINCIPAL_EMAIL>"
-    ],
-    "additional_notification_admin": [
-        "<YOUR_ADMIN_EMAIL>"
-    ],
-    "additional_notification_requester": [
-        "<YOUR_REQUESTER_EMAIL>"
-    ],
-    "approver_email_recipients": [
-         "<YOUR_APPROVER_RECIPIENT_EMAIL>"
     ],
     "approver_principals": [
          "<user|group>:<YOUR_APPROVER_PRINCIPAL_EMAIL>"
@@ -44,15 +32,16 @@ with the correct values.
 
 ## Install
 
-1. Run the following command at the root of the folder:
+1. Run the following commands at the root of the folder. Replace `<YOUR_PROJECT_ID>` with the correct value:
 ```shell 
 $ sudo ./install.sh
+$ export GOOGLE_CLOUD_QUOTA_PROJECT="<YOUR_PROJECT_ID>"
 $ terraform init
 $ terraform plan
 $ terraform apply
 ```
 
-> Note: The `install.sh` script also sets the current project as the `quota` project, which is required by `cloudasset.googleapis.com` API calls.
+> Note: The `GOOGLE_CLOUD_QUOTA_PROJECT` environment variable sets the current project as the `quota` project, which is required by `cloudasset.googleapis.com` API calls.
 
 2. In the console, under IAM & Admin => PAM, request Grant access to a role for period of time:
 

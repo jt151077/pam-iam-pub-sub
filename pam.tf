@@ -45,17 +45,11 @@ resource "google_privileged_access_manager_entitlement" "entitlement" {
     }
   }
 
-  additional_notification_targets {
-    admin_email_recipients = local.additional_notification_admin
-    requester_email_recipients = local.additional_notification_requester
-  }
-
   approval_workflow {
     manual_approvals {
       require_approver_justification = true
       steps {
         approvals_needed = 1
-        approver_email_recipients = local.approver_email_recipients
         approvers {
           principals = local.approver_principals
         }
