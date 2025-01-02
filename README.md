@@ -41,6 +41,7 @@ $ terraform apply
 ```
 
 > Note: The `GOOGLE_CLOUD_QUOTA_PROJECT` environment variable sets the current project as the `quota` project, which is required by `cloudasset.googleapis.com` API calls.
+> Note: The `gcp_org_domain` is only necessary to retrieve the `org_id` and give necessary permissions to the org level Service Account: `service-org-${org_id}@gcp-sa-pam.iam.gserviceaccount.com`
 
 2. In the console, under IAM & Admin => PAM, request Grant access to a role for period of time:
 
