@@ -19,7 +19,6 @@ with the correct values.
     "project_nmr": <YOUR_PROJECT_NMR>,
     "project_default_region": "<YOUR_PROJECT_REGION>",
     "gcp_org_domain": "<YOUR_ORG_DOMAIN>",
-    "cloud_asset_owner_principal": "<user|group>:<YOUR_PRINCIPAL_EMAIL>",
     "eligible_users_principals": [
         "<user|group>:<YOUR_PRINCIPAL_EMAIL>"
     ],
